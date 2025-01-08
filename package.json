@@ -1,0 +1,14 @@
+{
+  "name": "generational-reading",
+  "version": "1.0.0",
+  "description": "README Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lina Silverheart",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^12.3.0"
+  }
+}
