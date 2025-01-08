@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// import packages needed for this application
 import fs from 'fs'; // File System module to write files
 import inquirer from 'inquirer'; // Inquirer module for user promp
 import generateMarkdown from './utils/generateMarkdown.js'; // Import the generateMarkdown function from the utils folder
@@ -32,8 +32,23 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'contributing',
+        message: 'What are the contribution guidelines?',
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'What are the test instructions?',
+    },
+    {
+        type: 'input',
         name: 'contact',
-        message: 'What is your GitHub username?'
+        message: 'What is your GitHub username?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
     },
     
 ];
@@ -47,7 +62,7 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     // Prompts the user with the array of questions
     inquirer.prompt(questions)

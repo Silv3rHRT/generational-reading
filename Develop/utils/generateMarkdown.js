@@ -45,7 +45,9 @@ ${data.description}
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-${renderLicenseLink(data.license)}* [Contact](#contact)
+${renderLicenseLink(data.license)}* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
 ## Installation
 ${data.installation}
@@ -55,8 +57,16 @@ ${data.usage}
 
 ${renderLicenseSection(data.license)}
 
-## Contact
-For any questions or inquiries, reach out to me on GitHub: [${data.contact}](https://github.com/${data.contact})
+## Contributing
+${data.contributing}
+
+## Tests
+${data.tests}
+
+## Questions
+For any questions or inquiries:
+- GitHub: [${data.contact}](https://github.com/${data.contact})
+- Email: [${data.email}](mailto:${data.email})
 `;
 }
 
