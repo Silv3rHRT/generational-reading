@@ -1,13 +1,14 @@
 // TODO: Include packages needed for this application
-import fs from 'fs';
-import inquirer from 'inquirer';
-import generateMarkdown from './utils/generateMarkdown.js';
-// TODO: Create an array of questions for user input
+import fs from 'fs'; // File System module to write files
+import inquirer from 'inquirer'; // Inquirer module for user promp
+import generateMarkdown from './utils/generateMarkdown.js'; // Import the generateMarkdown function from the utils folder
+
+//Create an array of questions for user input
 const questions = [
     {
-        type: 'input', //what kind of data will be passed in, in this case we use input as we will be typing all our answers in
-        name: 'title', //creates a name key for this response
-        message: 'What is the title of your project?' //question to be asked
+        type: 'input', // Specifies the type of question (input means the user will type a response)
+        name: 'title', // Key name for the answer to this question
+        message: 'What is the title of your project?' // The question presented to the user
     },
     {
         type: 'input',
@@ -37,20 +38,24 @@ const questions = [
     
 ];
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
-    // creates the new file and leaves a motivational console log
+    // Writes the data to a file with the given file name (file name is added below in the init fuction)
     fs.writeFile(fileName, data, () => {
+        // Logs success message when file is written
         console.log('README file created! Good luck on the project! I believe in you!')
     });
 }
 
 // TODO: Create a function to initialize app
 function init() {
+    // Prompts the user with the array of questions
     inquirer.prompt(questions)
         .then((answers) => {
-            const readmeContent = generateMarkdown(answers); //uses generateMarkdown function from generateMarkdown.js to create README
-            writeToFile('README.md', readmeContent); //writes generated content to the file
+            //generates the README content using the user's answers
+            const readmeContent = generateMarkdown(answers); 
+            //Writes the generated content to the README.md (this is also where the above fs.writefile gets the fileName to create)
+            writeToFile('README.md', readmeContent);
         });
 }
 
