@@ -41,6 +41,8 @@ This project is licensed under the MIT license.
 
 -[Video Tutorial](https://drive.google.com/file/d/1Nml7sgq-z45oZWZC9Y4d4L-R-Xl3by5c/view?usp=sharing)
 -[Example README from video](/Develop/README.md)
+-[Inquirer](https://www.npmjs.com/package/inquirer)
+-[W3 schools](https://www.w3schools.com)
 
 ## Questions
 For any questions or inquiries:
